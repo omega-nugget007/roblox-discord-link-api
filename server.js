@@ -11,7 +11,7 @@ app.use(express.json());
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 const DISCORD_GUILD_ID = process.env.DISCORD_GUILD_ID;
 const API_PORT = process.env.API_PORT || 3000;
-const API_KEY =KJH87sd98sdf98sdf98sdf98sdf98SDf;
+const API_KEY = 'KJH87sd98sdf98sdf98sdf98sdf98SDf';
 
 // ---------- DISCORD CLIENT ----------
 const client = new Client({
@@ -123,5 +123,6 @@ app.post("/checkMember", checkApiKey, async (req, res) => {
 app.listen(API_PORT, () => {
   console.log(`API en ligne sur le port ${API_PORT}`);
 });
+
 
 
