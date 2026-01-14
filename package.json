@@ -1,0 +1,10 @@
+{
+  "name": "roblox-discord-link-api",
+  "type": "module",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5"
+  }
+}
