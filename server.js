@@ -7,9 +7,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/health", (req, res) => res.json({ status: "ok" }));
-
-
 // ---------- CONFIG ----------
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 const DISCORD_GUILD_ID = process.env.DISCORD_GUILD_ID;
@@ -121,6 +118,8 @@ app.post("/checkMember", checkApiKey, async (req, res) => {
     return res.status(500).json({ error: "Erreur serveur Discord" });
   }
 });
+
+app.get("/health", (req, res) => res.json({ status: "ok" }));
 
 // ---------- DEMARRAGE ----------
 app.listen(API_PORT, () => {
